@@ -32,9 +32,14 @@ values(001, "Aura Goddess Duster Gown", 50, "https://i.ibb.co/jL4KKF6/auragoddes
 
 
 insert into testimonials (id, review, author, city)
-values(001, "", "", ""),
-(002, "", "", ""),
-(003, "", "", ""),
-(004, "", "", ""),
-(005, "", "", ""),
-(006, "", "", "");
+values(001, "I ordered the Gaya Goddess Duster for a weekend get away. This cover up is such great quality and was so comfy. Definitely will be buying more from COMPANY NAME", "Jessica", "Hamptons"),
+(002, "Bought the Leather Cap in black and absolutely love it! So cute, goes with every outfit, and the leather and stitching are such great quality!", "Elena", "Pheonix"),
+(003, "The Jane Keyhole Silk Dress was delivered in such a sweetly wrapped box. The silk was so soft and put together so nicely. The dress withstood a long night of me out dancing.", "Gisele", "Manhattan"),
+(004, "Love the Leopard Faux Fur Coat! So cozy and warm. Received so many compliments on my new Leopard coat!", "Martina", "Hoboken"),
+(005, "I bought the Pink Fey Velvet Box Bag and love it. It’s really well made, and really roomy inside for your cell phone, wallet, touch up make up, and emergency slip on Dr. Scholls during a night out.", "Anna", "Houston"),
+(006, "The Checked Trench Coat is a must have. Such a cool addition to my wardrobe and I get so many compliments on it. There is plenty of pocket room in the inner chest, as well as a pocket for each hand. The lining is thick enough to keep you warm on, while not being too heavy of a coat. Highly recommend this piece!", "Alyssa", "Washington DC"),
+(007, "Oh my gosh! I love my new Onsie! It is so cute, so comfy, and so different than any of my peices! I bought it in black and love love love it. Thanks COMPANY NAME!", "Tabetha", "San Diego"),
+(008, "So in love with my new dress! The Rose Print Silk Maxi Dress is so adorable and make of such nice silk. Thank you!!", "Rachel", "Brooklyn"),
+(009, "Totally love the Leather Ankle Boots! They go with everything and are so comfortable! Totally recommend these babies. They fit to size too, I wear a size 8 and they fit perfectly to my size 8 shoe.", "Cynthia", "Queens"),
+(010, "Bought the Wool Blend Coat and totally worth the buy. Such a toasty coat, and made really nicely.", "Claire", "Boston")
+;
