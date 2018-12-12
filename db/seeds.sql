@@ -31,3 +31,10 @@ values(001, "Aura Goddess Duster Gown", 50, "https://i.ibb.co/jL4KKF6/auragoddes
 (031, "Pink Fey Velvet Box Bag", 353, "https://i.ibb.co/b2YBs39/13083663-14641911-1000.jpg", "Mehry Miu", "accessories");
 
 
+insert into testimonials (id, review, author, city)
+values(001, "", "", ""),
+(002, "", "", ""),
+(003, "", "", ""),
+(004, "", "", ""),
+(005, "", "", ""),
+(006, "", "", "");
