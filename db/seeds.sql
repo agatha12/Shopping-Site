@@ -12,3 +12,13 @@ values(001, "Aura Goddess Duster Gown", 50, "https://i.ibb.co/jL4KKF6/auragoddes
 (011, "Onsie Yellow", 45, "https://i.ibb.co/vZCFLKS/yellowonesie.png", "Onsies for Oneness", "apparel"),
 (012, "Onsie Brown", 45, "https://i.ibb.co/PZ4Zdyf/brownonsie.png", "Onsies for Oneness", "apparel"),
 (013, "Onsie Black", 45, "https://i.ibb.co/YP86ktQ/blackonsie.png", "Onsies for Oneness", "apparel");
+
+
+
+insert into testimonials (id, review, author, city)
+values(001, "", ),
+(002),
+(003),
+(004),
+(005),
+(006);

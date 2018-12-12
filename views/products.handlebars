@@ -1,0 +1,20 @@
+{{!-- PRODUCTS PAGE of website --}}
+	<head>
+		<title>Welcome to our Store</title>
+
+    <h2>Testimonials</h2>
+	</head>
+
+  <ul>
+  {{!-- code for displaying PRODUCTS --}}
+  {{#each cats}}
+  {{#if sleepy}}
+  {{> cats/cat-block sleep=false}}
+  {{/if}}
+  {{/each}}
+</ul>
+
+
+	<body>
+		{{{ body }}}
+	</body>

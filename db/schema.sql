@@ -24,7 +24,8 @@ primary key (user_id)
 
 create table testimonials (
 id int(5) not null ,
-text varchar(100) not null,
+review varchar(200) not null,
 author varchar(20) not null, 
+city varchar(20) not null,
 primary key(id)
 );
