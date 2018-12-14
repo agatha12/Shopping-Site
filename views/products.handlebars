@@ -1,20 +1,13 @@
-{{!-- PRODUCTS PAGE of website --}}
-	<head>
-		<title>Welcome to our Store</title>
 
-    <h2>Testimonials</h2>
-	</head>
 
-  <ul>
-  {{!-- code for displaying PRODUCTS --}}
-  {{#each cats}}
-  {{#if sleepy}}
-  {{> cats/cat-block sleep=false}}
-  {{/if}}
+{{#each product}}
+
+<li>
+	{{name}}
+    <img class="productimg" src="{{img}}">
+   <p>Price: {{price}}</p>
+  <p> Designer: {{designer}}</p>
+</li>
+    <button value={{id}}>Add to cart</button>
+
   {{/each}}
-</ul>
-
-
-	<body>
-		{{{ body }}}
-	</body>

@@ -34,5 +34,19 @@ router.post("/api/testimonials", function(req, res) {
 });
 
 
+var product = require("../models/products");
+
+
+router.get("/productview", function(req, res) {
+  product.all(function(data) {
+    var prodObject ={
+        product: data
+      };
+    console.log(prodObject);
+    res.render("products", prodObject);
+  });
+});
+
+
 // Export routes for server.js to use.
 module.exports = router;
