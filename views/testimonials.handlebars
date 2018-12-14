@@ -5,10 +5,14 @@
 
 <ul>
   {{!-- code for displaying TESTIMONIALS --}}
-  {{#each cats}}
-  {{#if sleepy}}
-  {{> cats/cat-block sleep=false}}
-  {{/if}}
+  {{#each testimonials}}
+  <li>
+    <p>
+        {{this.review}} | {{this.author}} | {{this.city}}
+    </p>
+
+  </li>
+
   {{/each}}
 </ul>
 
@@ -18,8 +22,11 @@
   <div class="form-group">
     <label for="ca">Your Review: </label>
     <input type="text" id="text" name="text">
-    <label for="ca">Your name: </label>
+    <label for="user">Your Name: </label>
     <input type="text" id="name" name="name">
+    <label for="place">City: </label>
+    <input type="text" id="city" name="city">
+
   </div>
 
   <button type="submit">Add Your Review</button>
