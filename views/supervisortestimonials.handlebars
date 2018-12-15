@@ -4,12 +4,7 @@
 </head>
 
     
-<form>
-    <label>Enter the Id of the testimonial you would like it delete</label>
-    <input type="text" id="testid">
- <button type="submit" class="deletetesti">Delete</button>
-    </form>
-  {{!-- code for displaying TESTIMONIALS --}}
+
   {{#each testimonials}}
 
     <p>
@@ -17,7 +12,7 @@
         {{review}} | {{author}} | {{city}}
     </p>
 
-  
+<button value="{{id}}" type="submit" class="deletetesti">Delete</button>
    
   {{/each}}
 

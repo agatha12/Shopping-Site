@@ -132,10 +132,13 @@ $(function(){
 
     $(function(){
         $(".deletetesti").on("click", function(event){
-            event.preventDefault()
-            var id = $("#testid").val()
-       
-            console.log(id)
+   
+            var id = $(this).val()
+
+            console.log(this)
+            console.log($(this))
+            
+            console.log(this.val)
         
                 $.ajax("/api/suptesti/" + id, {
                   type: "DELETE"
