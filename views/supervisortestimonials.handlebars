@@ -1,0 +1,23 @@
+<head>
+  <title>Name of our company/store</title>
+  <h2>Supervisor Testimonial View</h2>
+</head>
+
+    
+<form>
+    <label>Enter the Id of the testimonial you would like it delete</label>
+    <input type="text" id="testid">
+ <button type="submit" class="deletetesti">Delete</button>
+    </form>
+  {{!-- code for displaying TESTIMONIALS --}}
+  {{#each testimonials}}
+
+    <p>
+        Id: {{id}}
+        {{review}} | {{author}} | {{city}}
+    </p>
+
+  
+   
+  {{/each}}
+
