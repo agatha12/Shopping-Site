@@ -1,13 +1,36 @@
 
+<header id="header">Header</header>
+<section id="content">
+  <from id="sortform">
+<section id="searchlinks">
+  <select id="sortselect" size="4" multiple>
+  <option value="price">price</option>
+  <option value="designer">designer</option>
+  <option value="category">Category</option>
+</select>
+<button type="submit" id="sort">Sort</button>
+</from>
+  <button class="searchlink">button</button><br>
+  <button class="searchlink">button</button><br>
+  <button class="searchlink">button</button><br>
 
+</section>
+
+
+<div id="productdisplay">
 {{#each product}}
+<div class="productdiv">
+  <h2>{{name}}</h2>
+<img class="productimg" src="{{img}}">
 
-<li>
-	{{name}}
-    <img class="productimg" src="{{img}}">
-   <p>Price: {{price}}</p>
+	
+
+  <p>Price: {{price}}</p>
   <p> Designer: {{designer}}</p>
-</li>
-    <button value={{id}}>Add to cart</button>
 
+    <button value={{id}}>Add to cart</button>
+  </div>
   {{/each}}
+
+  </div>
+  </section>

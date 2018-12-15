@@ -12,7 +12,12 @@ var myModel = {
         orm.create("testimonials", cols, vals, function(res) {
             cb(res);
         });
-    }
+    },
+    delete: function(condition, cb) {
+        orm.delete("testimonials", condition, function(res) {
+          cb(res);
+        });
+      }
 };
 
 // Export the database functions for the controller.js.

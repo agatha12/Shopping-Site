@@ -1,0 +1,33 @@
+
+<header id="header">
+  <h1>Supervisor View</h1>
+</header>
+<section id="content">
+<section id="searchlinks">
+
+<button class="searchlink" id="supadd" type="button" onclick="window.location.href='/addprod'">Add Product</button>
+<button class="searchlink" id="suptesti" type="button" onclick="window.location.href='/supervisortestimonialview'">Testimonals</button>
+
+
+
+</section>
+
+
+<div id="productdisplay">
+{{#each product}}
+<div class="productdiv">
+  <h2>{{name}}</h2>
+<img class="productimg" src="{{img}}">
+   <p>Price: {{price}}</p>
+  <p> Designer: {{designer}}</p>
+  <button class="updateprod" value={{id}}>Update product</button>
+  <button class="deleteprod" value={{id}}>Delete product</button>
+  <div class={{id}}></div>
+</div>
+    
+    
+  
+  {{/each}}
+
+  </div>
+  </section>
