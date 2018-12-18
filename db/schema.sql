@@ -16,10 +16,10 @@ primary key(id)
 
 -- orders
 create table orders (
-user_id int (5) not null,
+userid varchar (20) not null,
 products varchar(100) null, 
 quantity varchar(100) null,
-primary key (user_id)
+primary key (userid)
 );
 
 -- testimonials

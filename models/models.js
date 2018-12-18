@@ -17,7 +17,7 @@ var myModel = {
         orm.delete("testimonials", condition, function(res) {
           cb(res);
         });
-      }
+    }
 };
 
 // Export the database functions for the controller.js.

@@ -43,3 +43,5 @@ values(001, "I ordered the Gaya Goddess Duster for a weekend get away. This cove
 (009, "Totally love the Leather Ankle Boots! They go with everything and are so comfortable! Totally recommend these babies. They fit to size too, I wear a size 8 and they fit perfectly to my size 8 shoe.", "Cynthia", "Queens"),
 (010, "Bought the Wool Blend Coat and totally worth the buy. Such a toasty coat, and made really nicely.", "Claire", "Boston")
 ;
+
+insert into orders (userid, products, quantity) values ("mbvj", "Checked Trench Coat", "Four");

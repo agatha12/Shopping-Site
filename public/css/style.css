@@ -3,6 +3,58 @@
     width: 250px;
 }
 
+#productname {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    letter-spacing: 3px;
+}
+
+#productprice {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    
+}
+
+#productdesigner {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    
+}
+
+#price-option {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    
+}
+
+#designer-option {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+#category-option {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+#photo-two {
+    height: 540px;
+    width: 1000px;
+    margin-left: 10.4%;
+    position: absolute;
+    bottom: -700px; 
+}
+
+#sortselect {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;   
+    width: 120px;
+    height: 40px;
+
+}
+
+
+
 #content {
     width: 95%;
     margin: 0 auto;
@@ -12,7 +64,7 @@
     height: 100px;
     text-align: center;
     font-size: 20px;
-    background-color: turquoise;
+    
     color: white;
     margin-bottom: 15px;
 }
@@ -22,7 +74,6 @@
     width: 10%;
     min-width: 100px;
     float:left;
-    background-color: aquamarine;
     margin-right: 50px;
 }
 
@@ -46,3 +97,271 @@
     float: left;
     text-align:center;
 }
+
+#header1 {
+        height: 540px;
+        width: 1000px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #caption {
+
+        font-size: 50px;
+        position: absolute;
+        bottom: 370%;
+        margin-left: 12%;
+        font-family: 'Playfair Display', serif;
+    }
+
+    #caption2 {
+
+        font-size: 50px;
+        position: absolute;
+        bottom: 150%;
+        margin-left: 12%;
+        font-family: 'Playfair Display', serif;
+    }
+
+    #sub-caption {
+        font-family: 'Roboto', sans-serif;
+        font-size: 23px;
+        margin-left: 18%;
+        position: absolute;
+        bottom: 310%;
+    }
+    #sub-caption2 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 23px;
+        margin-left: 23%;
+        position: absolute;
+        bottom: 90%;
+    }
+
+    #testi-container {
+        margin-left: 6%;
+        margin-right: 7%;
+    }
+
+    #heart {
+        color: pink;
+    }
+    #testimonial {
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+    }
+
+    #testi-header {
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 5px;
+        font-size: 50px;
+        position: absolute;
+        bottom: 150%;
+        margin-left: 12%;
+    }
+
+    #testi-form {
+        margin-top: 3%;
+        margin-left: 20%;
+        margin-bottom: 7%;
+    }
+
+    #text {
+        width: 50%;
+        height: 120px;
+        margin-left: 12%;
+    }
+
+    #label-name {
+        margin-left: 13%;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    #label-city {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    #addreviewbtn {
+        margin-left: 32%;
+    }
+
+    #carouselExampleSlidesOnly {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .main-header-container2 {
+        float: right;
+        margin-right: 20px;
+        position: relative;
+        top: -20px;
+    }
+
+    .main-header-container3 {
+        float: right;
+        margin-right: 35px;
+        position: relative;
+        top: -5px;
+    }
+
+    .main-header-container4 {
+        float: right;
+        margin-right: 35px;
+        position: relative;
+        top: 30px;
+    }
+
+    .main-header-container5 {
+        float: right;
+        margin-right: 35px;
+        position: relative;
+        top: 30px;
+    }
+
+    .main-header-container6 {
+        float: right;
+        margin-right: 230px;
+        position: relative;
+        top: -10px;
+        margin-left: 80px;
+    }
+
+    .main-header-container7 {
+        float: right;
+        margin-right: -20px;
+        position: relative;
+        top: -10px;
+        
+    }
+
+
+    #main-header-three {
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        letter-spacing: 3px;
+        position: relative;
+        bottom: -10px;
+        margin-left: 20px;
+        margin-right: 50px;
+        color: black;
+        text-decoration: none;
+    }
+
+    #main-header-four {
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        letter-spacing: 3px;
+        margin-left: 15px;
+        position: relative;
+        bottom: -10px;
+        color: black;
+
+    }
+
+    #main-header-five {
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        letter-spacing: 3px;
+        margin-left: 15px;
+        position: relative;
+        bottom: -10px;
+        color: black;
+    }
+
+    #main-header-six {
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        letter-spacing: 3px;
+        margin-left: 15px;
+        position: relative;
+        bottom: -10px;
+        color: black;
+    }
+    
+
+    .wrapbtn {
+        
+        margin-left: 43%;
+        position: absolute;
+        bottom: 230%;
+        text-decoration: none;
+    }
+
+    .wrapbtn2 {
+        
+        margin-left: 43%;
+        position: absolute;
+        bottom: 15%;
+        text-decoration: none;
+    }
+
+    #shoptbtn {
+        
+        letter-spacing: 3px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        border-color: white;
+        color: white;
+        text-decoration: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    #shoptbtn2 {
+        
+        letter-spacing: 3px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        border-color: white;
+        color: white;
+        text-decoration: none;
+    }
+
+
+    .shopCart {
+        color: black;
+    }
+
+    .footer{
+        position: absolute;
+        bottom: -150%;
+        width: 100%;
+        height: 60px;
+        line-height: 60px;
+        background-color: #f5f5f5;
+    }
+
+    .footer-2{
+        position: absolute;
+        bottom: -670%;
+        width: 100%;
+        height: 60px;
+        line-height: 60px;
+        background-color: #f5f5f5;
+    }
+
+    .footer3 {
+
+        position: absolute;
+        bottom: -190%;
+        width: 100%;
+        height: 60px;
+        line-height: 60px;
+        background-color: #f5f5f5;
+
+    }
+
+    .main-footer{
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        color: cornflowerblue;
+        letter-spacing: 5px;
+        margin-left: 2%;
+    
+    }
