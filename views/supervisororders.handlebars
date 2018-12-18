@@ -1,0 +1,19 @@
+<head>
+    <h2> Supervisor Order View</h2>
+</head>
+
+{{#each orders}}
+
+<p>
+===================================
+    <br>
+    User Id: {{userid}}
+    <br>
+    Product: {{products}}
+    <br>
+    Quantity: {{quantity}}
+    <br>
+</p>
+<button value="{{userid}}" type="submit" class="deleteorder">Delete</button>
+
+{{/each}}

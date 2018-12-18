@@ -1,33 +1,84 @@
 <head>
   <title>Name of our company/store</title>
-  <h2>Leave Your Thoughts</h2>
 </head>
 
-<ul>
-  {{!-- code for displaying TESTIMONIALS --}}
-  {{#each testimonials}}
-  <li>
-    <p>
-        {{this.review}} | {{this.author}} | {{this.city}}
+<nav>
+  <!-- Log-In, Cart, About us -->
+  <div class="main-header-container3">
+    <span>
+      <a href="/productview" class="me-link">
+        <i class="fas fa-shopping-cart fa-2x shopCart"></i>
+      </a>
+    </span>
+  </div>
+  <div class="main-header-container2">
+    <span>
+      <a href="#">
+        <p id="main-header-three">LOG-IN</p>
+      </a>
+    </span>
+  </div>
+  <div class="main-header-container2">
+    <span>
+      <a href="/supervisorview" class="me-link">
+        <p id="main-header-four">SUPERVISOR</p>
+      </a>
+    </span>
+  </div>
+
+</nav>
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img id="header1" src="http://cloudoflace.com/wp-content/uploads/2016/01/Plugged_1.jpg">
+      <div class="carousel-caption">
+        <h2 id="testi-header">LEAVE YOUR THOUGHTS</h2>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div id="testi-container">
+  <ul>
+    {{!-- code for displaying TESTIMONIALS --}}
+    {{#each testimonials}}
+
+    <p id="testimonial">
+      "{{this.review}}" - <strong>{{this.author}}, {{this.city}}</strong>
     </p>
 
-  </li>
 
-  {{/each}}
-</ul>
 
-<h2>Leave Your Thoughts</h2>
-<form class="create-form">
+    {{/each}}
+  </ul>
+</div>
+
+<form id="testi-form" class="create-form">
 
   <div class="form-group">
-    <label for="ca">Your Review: </label>
-    <input type="text" id="text" name="text">
-    <label for="user">Your Name: </label>
+    <input type="text" id="text" name="text" placeholder="We'd love to hear from you">
+    <br>
+    <br>
+    <label for="user" id="label-name">Your Name: </label>
     <input type="text" id="name" name="name">
-    <label for="place">City: </label>
+    <label for="place" id="label-city">City: </label>
     <input type="text" id="city" name="city">
 
   </div>
-
-  <button type="submit">Add Your Review</button>
+  <button type="submit" id="addreviewbtn" class="btn btn-dark">Add Your Review <i class="far fa-heart" id="heart"></i></button>
 </form>
+
+<footer class="footer3">
+
+  <div class="footer-container">
+    <div class="row">
+      <div class="col-md-5">
+        <p class="main-footer">© 2018 Agatha | Martin | Sienna</p>
+      </div>
+    </div>
+  </div>
+
+</footer>

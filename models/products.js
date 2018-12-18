@@ -14,6 +14,11 @@ var product = {
       cb(res);
     });
   },
+  pull: function(prodID, cb) {
+    orm.pull("products", prodID, function(res) {
+      cb(res)
+    });
+  },
   // The variables cols and vals are arrays.
   create: function(cols, vals, cb) {
     orm.create("products", cols, vals, function(res) {

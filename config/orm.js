@@ -40,83 +40,118 @@ function objToSql(ob) {
 
 //   OBJECT FOR ALL OUR SQL STATEMENT FUNCTIONS
 var orm = {
-    // show all testimonials through MYSQL statement
-    all: function(tableInput, cb) {
-        var queryString = "SELECT * FROM " + tableInput + ";";
-        connection.query(queryString, function(err, result) {
-            if (err) {
-                throw (err);
-            }
-            cb (result);
-        });
-    },
-
-
-    sort: function(tableInput, column, cb) {
-      var queryString = "SELECT * FROM " + tableInput + " order by " + column + ";";
-      connection.query(queryString, function(err, result) {
-          if (err) {
-              throw (err);
-          }
-          cb (result);
-      });
+  // show all testimonials through MYSQL statement
+  all: function (tableInput, cb) {
+    var queryString = "SELECT * FROM " + tableInput + ";";
+    connection.query(queryString, function (err, result) {
+      if (err) {
+        throw (err);
+      }
+      cb(result);
+    });
   },
 
-    create: function(table, cols, vals, cb) {
-      
-      var queryString = "INSERT INTO " + table;
 
-      queryString += " (";
-      // prints out (review, author, city)
-      queryString += cols.toString();
-      queryString += ") ";
-      queryString += "VALUES (";
-      // prints out ["?","?","?"] 
-      queryString += printQuestionMarks(vals.length);
-      queryString += ") ";
-      
-      console.log(queryString);
-
-      connection.query(queryString, vals, function(err, result) {
-        if (err) {
-          throw err;
-        }
-
-        cb(result);
-      });
-    },
-
-    update: function(table, col, val, id, cb) {
-      var queryString = "UPDATE " + table + " SET " + col+"="+JSON.stringify(val) ;
-      queryString += " WHERE ";
-      queryString += id;
+  sort: function (tableInput, column, cb) {
+    var queryString = "SELECT * FROM " + tableInput + " order by " + column + ";";
+    connection.query(queryString, function (err, result) {
+      if (err) {
+        throw (err);
+      }
+      cb(result);
+    });
+  },
   
-      console.log(queryString);
-      connection.query(queryString, function(err, result) {
-        if (err) {
-          throw err;
-        }
-  
-        cb(result);
-      });
-    },
+  pull: function(tableInput, prodID, cb) {
+    var queryString = "SELECT * FROM " + tableInput + " where id = " + prodID + ";";
+    connection.query(queryString, function(err, result) {
+      if(err) {
+        
+        throw (err);
+      }
+      cb (result);
+    });
+  },
 
-    delete: function(table, condition, cb) {
-      var queryString = "DELETE FROM " + table;
-      queryString += " WHERE ";
-      queryString += condition;
+  create: function (table, cols, vals, cb) {
 
-      console.log(queryString);
+    var queryString = "INSERT INTO " + table;
 
-      connection.query(queryString, function(err, result) {
-        if(err) {
-          throw err;
-        }
+    queryString += " (";
+    // prints out (review, author, city)
+    queryString += cols.toString();
+    queryString += ") ";
+    queryString += "VALUES (";
+    // prints out ["?","?","?"] 
+    queryString += printQuestionMarks(vals.length);
+    queryString += ") ";
 
-        cb(result);
-      });
-    }
-}
+    console.log(queryString);
+
+    connection.query(queryString, vals, function (err, result) {
+      if (err) {
+        throw err;
+      }
+
+      cb(result);
+    });
+  },
+
+  newcarts: function (table, cols, vals, cb) {
+
+    var queryString = "INSERT INTO " + table;
+
+    queryString += " (";
+    queryString += cols.toString();
+    queryString += ") ";
+    queryString += "VALUES (";
+    
+    // prints out ["?","?","?"] 
+    queryString += printQuestionMarks(vals.length);
+    queryString += ") ";
+
+    console.log(queryString);
+
+    connection.query(queryString, vals, function (err, result) {
+      if (err) {
+        throw err;
+      }
+
+      cb(result);
+    });
+  },
+
+  update: function (table, col, val, id, cb) {
+    var queryString = "UPDATE " + table + " SET " + col + "=" + JSON.stringify(val);
+    queryString += " WHERE ";
+    queryString += id;
+
+    console.log(queryString);
+    connection.query(queryString, function (err, result) {
+      if (err) {
+        throw err;
+      }
+
+      cb(result);
+    });
+  },
+
+  delete: function (table, condition, cb) {
+    var queryString = "DELETE FROM " + table;
+    queryString += " WHERE ";
+    queryString += condition;
+
+    console.log(queryString);
+
+    connection.query(queryString, function (err, result) {
+      if (err) {
+        throw err;
+      }
+
+      cb(result);
+    });
+  }
+};
 
 // Export the orm object for the model (cat.js).
 module.exports = orm;
