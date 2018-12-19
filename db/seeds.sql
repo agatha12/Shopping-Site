@@ -6,9 +6,9 @@ values(001, "Aura Goddess Duster Gown", 50, "https://i.ibb.co/jL4KKF6/auragoddes
 (005, "Helena Goddess Kaftan Gown", 50, "https://i.ibb.co/P6r5Ckh/kasiahelenagoddesskaftangown.jpg", "Kasia Kulenty", "apparel"),
 (006, "Elena Goddess Gown", 50, "https://i.ibb.co/0t18Fcn/kasiaselenagoddessgown.jpg", "Kasia Kulenty", "apparel"),
 (007, "Aphrodite Goddess Gown", 50, "https://i.ibb.co/Cm6d0gP/kasiavenus.jpg", "Kasia Kulenty", "apparel"),
-(008, "Leather Cap Arena", 40, "https://i.ibb.co/fqP1sM3/paxacaparena.jpg", "Paxa", "hats"),
-(009, "Leather Cap Black", 40, "https://i.ibb.co/kGMdxPv/paxacapblack.jpg", "Paxa", "hats"),
-(010, "Leather Cap Brown", 40, "https://i.ibb.co/JR4HWHH/paxacapbrown.jpg", "Paxa", "hats"),
+(008, "Leather Cap Arena", 40, "https://i.ibb.co/fqP1sM3/paxacaparena.jpg", "Paxa", "accesories"),
+(009, "Leather Cap Black", 40, "https://i.ibb.co/kGMdxPv/paxacapblack.jpg", "Paxa", "accesories"),
+(010, "Leather Cap Brown", 40, "https://i.ibb.co/JR4HWHH/paxacapbrown.jpg", "Paxa", "accesories"),
 (011, "Onsie Yellow", 45, "https://i.ibb.co/vZCFLKS/yellowonesie.png", "Onsies for Oneness", "apparel"),
 (012, "Onsie Brown", 45, "https://i.ibb.co/PZ4Zdyf/brownonsie.png", "Onsies for Oneness", "apparel"),
 (013, "Onsie Black", 45, "https://i.ibb.co/YP86ktQ/blackonsie.png", "Onsies for Oneness", "apparel"),
@@ -28,7 +28,22 @@ values(001, "Aura Goddess Duster Gown", 50, "https://i.ibb.co/jL4KKF6/auragoddes
 (028, "Leather Biker Ankle Boots", 445, "https://i.ibb.co/Z2jwFLF/13343399-15369070-1000.jpg", "By Far", "shoes"),
 (029, "Crocodile Embossed Mules", 303, "https://i.ibb.co/dBnvKT3/13399237-15332287-1000.jpg", "ATP Atelier", "shoes"),
 (030, "Margot Tote Bag", 332, "https://i.ibb.co/Cm0qHwq/13339133-15069641-1000.jpg", "Danse Lete", "accessories"),
-(031, "Pink Fey Velvet Box Bag", 353, "https://i.ibb.co/b2YBs39/13083663-14641911-1000.jpg", "Mehry Miu", "accessories");
+(031, "Pink Fey Velvet Box Bag", 353, "https://i.ibb.co/b2YBs39/13083663-14641911-1000.jpg", "Mehry Miu", "accessories"),
+(032, "Mini Faux Fur Box Bag", 3006, "https://i.ibb.co/pfH2Pmx/natashakinkofurbag.jpg", "Natasha Zinko", "accessories"),
+(033, "Oversized Checked Wool Blazer", 920, "https://i.ibb.co/HYtpV86/natashakinkojacket.jpg", "Natasha Zinko", "apparel"),
+(034, "Light Weight Trench Coat", 1595, "https://i.ibb.co/X237Qz1/supriyaleletrenchcoat.jpg", "Supriya Lele", "outerwear"),
+(035, "Check Print Chiffon Midi Dress", 910, "https://i.ibb.co/PxYvpXR/supriyaleledress.jpg", "Supriya Lele", "apparel"),
+(036, "The Flower Queen Kimono", 1650, "https://i.ibb.co/HT6DnX5/johannaortizkimono.jpg", "Johanna Ortiz", "apparel"),
+(037, "Floral Print High-rise Silk Trouser", 1250, "https://i.ibb.co/42Rvmvn/johannaortizpant.jpg", "Johanna Ortiz", "apparel"),
+(038, "Rometty Floral Georgette Pants", 160, "https://i.ibb.co/qMhVHJj/gannipant.jpg", "Ganni", "apparel"),
+(039, "Kochhar Floral Silk Wrap Dress", 675, "https://i.ibb.co/1JT6HPM/gannidress.jpg", "Ganni", "apparel"),
+(040, "Tangerine Dress", 595, "https://i.ibb.co/xCDVF9D/delavalidress.jpg", "De La Vali", "apparel"),
+(041, "Keith Jumpsuit", 450, "https://i.ibb.co/WGmpWZM/delavalionesie.jpg", "De La Vali", "apparel"),
+(042, "Gathered Waist Tartan Trench Coat", 1460, "https://i.ibb.co/Ht5xGh5/rohkplaidcoat.jpg", "Rohk", "outerwear"),
+(043, "Draped houndstooth satin-jersey maxi dress", 950, "https://i.ibb.co/LhmpzfG/rohkdress.jpg", "Rohk", "apparel"),
+(044, "Cutout leather maxi dress", 2130, "https://i.ibb.co/61m0bBT/rohkyellowdress.jpg", "Rohk", "apparel"),
+(045, "Cropped striped cotton and wool-blend jacquard slim-leg pants", 650, "https://i.ibb.co/7Ccf7Mh/rohkpant.jpg", "Rohk", "apparel")
+;
 
 
 insert into testimonials (id, review, author, city)
