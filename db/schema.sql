@@ -30,3 +30,10 @@ author varchar(20) not null,
 city varchar(20) not null,
 primary key(id)
 );
+
+create table users (
+  id int not null auto_increment,
+  username varchar(225) not null,
+  password varchar(2250) not null,
+  primary key (id)
+);
