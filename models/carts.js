@@ -7,12 +7,17 @@ var carts = {
             cb(res);
         });
     },
-
     all: function(cb) {
         orm.all("orders", function(res) {
             cb(res);
         });
     },
+    show: function (userID, cb) {
+        orm.show("orders", userID, function(res) {
+            cb(res);
+        });
+    },
+    // Not working
     delete: function(condition, cb) {
         orm.delete("orders", condition, function(res) {
             cb(res);

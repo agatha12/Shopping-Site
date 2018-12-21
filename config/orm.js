@@ -51,8 +51,6 @@ var orm = {
       cb(result);
     });
   },
-
-
   sort: function (tableInput, column, cb) {
     var queryString = "SELECT * FROM " + tableInput + " order by " + column + ";";
     connection.query(queryString, function (err, result) {
@@ -73,7 +71,18 @@ var orm = {
       cb (result);
     });
   },
+  show: function(tableInput, userID, cb) {
 
+    var queryString = "SELECT * FROM " + tableInput + " where userid = " + userID + ";";
+    connection.query(queryString, function(err, result) {
+      if(err) {
+        
+        throw (err);
+      }
+      cb (result);
+    });
+  },
+  
   create: function (table, cols, vals, cb) {
 
     var queryString = "INSERT INTO " + table;

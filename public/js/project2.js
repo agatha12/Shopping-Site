@@ -220,14 +220,22 @@ $(function () {
             }
 
 
+            // Pulling out the value from USER input
+            var userid = newOrder.userid
+            var cartProduct = newOrder.products;
+            var cartQuantity = newOrder.quantity;
+
+            // console.log("userid: " + userid + "\n" + "products: " + cartProduct + "\n" + "quantity: " + cartQuantity);
+
             // // empty out the modal content
             $("#product-dump").empty();
             $("#price-dump").empty();
             $("#designer-dump").empty();
-            $("#productImg").empty();
+            $("#productImg").hide();
             $(".product-form").hide();
 
-            alert("Hey " + newOrder.userid + ", " + " you just added " + newOrder.quantity + " " + newOrder.products + " in your cart.");
+            alert("Hey " + userid + ", " + " you just added " + cartQuantity + " " + cartProduct + " in your cart.");
+
 
             $.ajax("/api/carts", {
                 type: "POST",
@@ -244,17 +252,44 @@ $(function () {
     });
 });
 
+$(function () {
+    $("#shoppingcart").on("click", function (event) {
+
+
+        event.preventDefault();
+
+        // var userid = newOrder.userid
+        $.get("/api/carts/" + userid, function (data) {
+
+            console.log(data);
+
+            // var cartuserID = data.carts[0].userid;
+            // var cartProduct = data.carts[0].products;
+            // var cartQuantity = data.carts[0].quantity;
+            // console.log("NEW ORDER MADE!" + "\n"
+            //     + cartuserID + "\n"
+            //     + cartProduct + "\n"
+            //     + cartQuantity);
+            // $("#user-dump").append(cartuserID);
+            // $("#quantity-dump").append(cartQuantity);
+            // $("#product-dump").append(cartProduct);
+        });
+    })
+});
+
+
+
 
 $(function () {
-    $(".deleteorder").on("click", function(event) {
-        var condition= $(this).val();
+    $(".deleteorder").on("click", function (event) {
+        var condition = $(this).val();
 
         console.log(condition);
 
         $.ajax("/api/supervisorordersview/" + condition, {
             type: "DELETE"
         }).then(
-            function() {
+            function () {
                 console.log("deleted User: " + userid);
                 location.reload();
             }

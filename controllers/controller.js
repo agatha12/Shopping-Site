@@ -9,7 +9,7 @@ var myModel = require("../models/models.js");
 // HOME PAGE 
 // =====================================
 
-router.get("/home", function(req, res) {
+router.get("/home", function (req, res) {
   res.render("index");
 });
 
@@ -21,16 +21,17 @@ router.get("/home", function(req, res) {
 router.get("/testimonials", function (req, res) {
   myModel.all(function (data) {
 
-    
+
     var myObject = {
       testimonials: data
     };
-    
+
     console.log(myObject);
     res.render("testimonials", myObject);
   });
 });
 
+// Posts new testimonial
 router.post("/api/testimonials", function (req, res) {
   myModel.create([
     "review", "author", "city"
@@ -51,10 +52,33 @@ var carts = require("../models/carts");
 router.post("/api/carts", function (req, res) {
   carts.newcarts([
     "userid", "products", "quantity"
-  ],[
-    req.body.userid, req.body.products, req.body.quantity
-  ], function (result) {
-    res.json({ id: result.insertId});
+  ], [
+      req.body.userid, req.body.products, req.body.quantity
+    ], function (result) {
+      res.json({ id: result.insertId });
+    });
+});
+
+// Get request to populate carts.handlebars with user's shopping cart info
+router.get("/api/carts/:userid", function (req, res) {
+
+  // Makes userid into a string for MySQL statement to work
+  var userID = JSON.stringify(req.params.userid);
+  // console.log(userID);
+  carts.show(userID, function (data) {
+    var userObj = {
+      carts: data
+    };
+
+    // console.log(userObj); 
+    // console.log("CART CONTENT" + "\n" 
+    // + "=========================" + "\n"
+    // + "username: " + userObj.carts[0].userid +"\n"
+    // + "Product: " + userObj.carts[0].products + "\n" +
+    // "Quantity: " + userObj.carts[0].quantity + "\n" );
+
+    res.render("carts", userObj);
+    // res.json({carts : data});
   });
 });
 
@@ -96,7 +120,7 @@ router.get("/api/productview/:id", function (req, res) {
     var prodObj = {
       product: data
     };
-    
+
     var prodName = prodObj.product[0].name;
     var prodPrice = prodObj.product[0].price;
     var prodDesigner = prodObj.product[0].designer;
@@ -211,7 +235,7 @@ router.delete("/api/suptesti/:condition", function (req, res) {
 // =====================================
 
 // gets all information for customer orders
-router.get("/supervisorordersview", function(req, res) {
+router.get("/supervisorordersview", function (req, res) {
   carts.all(function (data) {
 
     var myOrders = {
@@ -224,8 +248,8 @@ router.get("/supervisorordersview", function(req, res) {
 });
 
 // deletes customer order in database
-router.delete("/api/supervisorordersview/:condition", function(req, res) {
-  
+router.delete("/api/supervisorordersview/:condition", function (req, res) {
+
   var condition = req.params.userid;
   console.log(condition);
 
