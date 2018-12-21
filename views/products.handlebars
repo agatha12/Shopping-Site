@@ -3,15 +3,22 @@
     <!-- Log-In, Cart, About us -->
     <div class="header-container">
       <span>
-        <a href="/productview">
+        <a id="cartviewbutton" href="#">
           <i id="#main-header-two" class="fas fa-shopping-cart fa-2x shopCart"></i>
         </a>
       </span>
     </div>
     <div class="header-container">
       <span>
-        <a href="#">
+        <a href="/passport">
           <p id="main-header-three">LOG-IN</p>
+        </a>
+      </span>
+    </div>
+      <div class="header-container">
+      <span>
+        <a href="/logout">
+          <p id="main-header-three">LOG-OUT</p>
         </a>
       </span>
     </div>
@@ -90,12 +97,12 @@
           </h5>
           <form class="product-form">
             <div class="form-product">
-              <label for="ca">User Name: </label>
+              {{!-- <label for="ca">User Name: </label>
               <input type="text" name="userName" class="firstForm" id="userName" required="required">
               <br>
               <label for="prod">Product: </label>
               <input type="text" name="product" class="firstForm" id="product" required="required">
-              <br>
+              <br> --}}
               <label for="place">Quantity: </label>
               <br>
               <input type="number" name="quantity" class="firstForm" id="quantity" min="1" max="20" required="required">
