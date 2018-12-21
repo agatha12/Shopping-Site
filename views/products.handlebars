@@ -3,7 +3,8 @@
     <!-- Log-In, Cart, About us -->
     <div class="main-header-container4">
       <span>
-        <a href="/productview">
+        {{!-- dont know how to link through this href --}}
+        <a href="#" id="shoppingcart">
           <i class="fas fa-shopping-cart fa-2x shopCart"></i>
         </a>
       </span>
@@ -90,7 +91,8 @@
               <input type="text" name="product" class="firstForm" id="product" required="required">
               <br>
               <label for="place">Quantity: </label>
-              <input type="text" name="quantity" class="firstForm" id="quantity" required="required">
+              <br>
+              <input type="number" name="quantity" class="firstForm" id="quantity" min="1" max="20" required="required">
               <br>
             </div>
             <br>
