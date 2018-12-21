@@ -157,6 +157,24 @@ $(function () {
     });
 });
 
+
+$(function () {
+    $(".searchlink").on("click", function () {
+        
+        var sortTerm = $(this).val()
+
+        console.log(sortTerm)
+        window.location.href = '/productview/select/' + sortTerm
+    });
+});
+
+$(function () {
+    $("#testimonials-header").on("click", function () {
+        
+        window.location.href = '/testimonials'
+    });
+});
+
 $(function () {
     // add to cart modal function
     $(".cartBtn").on("click", function (event) {
