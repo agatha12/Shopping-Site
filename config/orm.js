@@ -162,6 +162,15 @@ var orm = {
     });
   },
 
+  // selectWheresort: function (tableInput, colToSearch, valOfCol, sort, cb) {
+  //   var queryString = "SELECT * FROM " + tableInput + " WHERE " + colToSearch + " = " + JSON.stringify(valOfCol) + " order by "+ JSON.stringify(sort);
+  //   console.log(queryString)
+  //   connection.query(queryString, function (err, result) {
+  //     if (err) throw err;
+  //     cb(result)
+  //   });
+  // },
+
   // passport addition selectWhere and Create
   selectWhere: function (tableInput, colToSearch, valOfCol, cb) {
     var queryString = "SELECT * FROM ?? WHERE ?? = ?";

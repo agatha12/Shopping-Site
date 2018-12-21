@@ -34,7 +34,18 @@ var product = {
     orm.delete("products", condition, function(res) {
       cb(res);
     });
+  },
+  selectWhere: function(col, condition, cb){
+    orm.selectWhere("products", col, condition, function(res){
+      cb(res);
+    });
+  },
+  selectWheresort: function(col, condition, sort, cb){
+    orm.selectWheresort("products", col, condition, sort, function(res){
+      cb(res);
+    });
   }
+  
 };
 
 module.exports = product;

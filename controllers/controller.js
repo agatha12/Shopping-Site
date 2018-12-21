@@ -111,6 +111,31 @@ router.get("/productview/:col", function (req, res) {
   });
 });
 
+router.get("/productview/select/:condition", function (req, res) {
+  var condition = req.params.condition
+  console.log(condition)
+  product.selectWhere("category", condition, function (err, data) {
+    var prodObject = {
+      product: data
+    };
+    console.log(prodObject);
+    res.render("products", prodObject);
+  });
+});
+
+// router.get("/productview/select/:condition/:sort", function (req, res) {
+//   var condition = req.params.condition
+//   var sort = req.params.sort
+//   // console.log(column)
+//   product.selectWheresort("category", condition, sort, function (data) {
+//     var prodObject = {
+//       product: data
+//     };
+//     console.log(prodObject);
+//     res.render("products", prodObject);
+//   });
+// });
+
 // Connects database to Product Modal
 router.get("/api/productview/:id", function (req, res) {
 
@@ -262,6 +287,20 @@ router.delete("/api/supervisorordersview/:condition", function (req, res) {
     }
   });
 });
+
+
+//displays about us page
+
+router.get("/aboutus", function (req, res) {
+  product.all(function (data) {
+    var prodObject = {
+      product: data
+    };
+    // console.log(prodObject);
+    res.render("aboutus", prodObject);
+  });
+});
+
 
 // Export routes for server.js to use.
 module.exports = router;
