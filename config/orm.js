@@ -39,6 +39,16 @@ function objToSql(ob) {
   return arr.toString();
 }
 
+function updatecart(object){
+    console.log(object)
+    var columns = object.columns
+    var values = object.values
+    var string = columns[0] + "=\"" + values[0] + "\", " + columns[1] + "=\"" + values[1] + "\""
+    
+
+    return string
+}
+
 //   OBJECT FOR ALL OUR SQL STATEMENT FUNCTIONS
 var orm = {
   // show all testimonials through MYSQL statement
@@ -82,7 +92,17 @@ var orm = {
       cb (result);
     });
   },
-  
+  check: function(tableInput, userID, cb) {
+
+    var queryString = "SELECT * FROM " + tableInput + " where userid = " + userID + ";";
+    connection.query(queryString, function(err, result) {
+      // if(err) {
+        
+      //   throw (err);
+      // }
+      cb (result);
+    });
+  },
   create: function (table, cols, vals, cb) {
 
     var queryString = "INSERT INTO " + table;
@@ -123,6 +143,23 @@ var orm = {
     console.log(queryString);
 
     connection.query(queryString, vals, function (err, result) {
+      if (err) {
+        throw err;
+      }
+
+      cb(result);
+    });
+  },
+  updatecarts: function(table, objColVals, condition, cb) {
+    var queryString = "UPDATE " + table;
+
+    queryString += " SET ";
+    queryString += updatecart(objColVals);
+    queryString += " WHERE ";
+    queryString += condition;
+
+    console.log(queryString);
+    connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
       }

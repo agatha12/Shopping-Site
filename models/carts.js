@@ -7,12 +7,22 @@ var carts = {
             cb(res);
         });
     },
+    updatecarts: function(cols, vals, condition, cb) {
+        orm.updatecarts("orders", cols, vals, condition, function(res) {
+            cb(res);
+        });
+    },
     all: function(cb) {
         orm.all("orders", function(res) {
             cb(res);
         });
     },
     show: function (userID, cb) {
+        orm.show("orders", userID, function(res) {
+            cb(res);
+        });
+    },
+    check: function (userID, cb) {
         orm.show("orders", userID, function(res) {
             cb(res);
         });

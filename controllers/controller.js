@@ -9,7 +9,7 @@ var myModel = require("../models/models.js");
 // HOME PAGE 
 // =====================================
 
-router.get("/home", function (req, res) {
+router.get("/", function (req, res) {
   res.render("index");
 });
 
@@ -26,7 +26,7 @@ router.get("/testimonials", function (req, res) {
       testimonials: data
     };
 
-    console.log(myObject);
+    // console.log(myObject);
     res.render("testimonials", myObject);
   });
 });
@@ -59,6 +59,16 @@ router.post("/api/carts", function (req, res) {
     });
 });
 
+router.put("/api/cartsupdate/:user", function (req, res) {
+  var userid = req.params.user
+  carts.updatecarts({
+    columns: ["products", "quantity"], 
+    values: [req.body.products, req.body.quantity]
+  },"userid = "+userid, function (result) {
+      res.json({ id: result.insertId });
+    });
+});
+
 // Get request to populate carts.handlebars with user's shopping cart info
 router.get("/api/carts/:userid", function (req, res) {
 
@@ -81,7 +91,27 @@ router.get("/api/carts/:userid", function (req, res) {
     // res.json({carts : data});
   });
 });
+router.get("/api/cartcheck/:userid", function (req, res) {
 
+  // Makes userid into a string for MySQL statement to work
+  var userID = JSON.stringify(req.params.userid);
+  // console.log(userID);
+  carts.check(userID, function (data) {
+  //   if (){
+  //     var userObj = {
+  //       carts: "no cart"
+  //     };
+  //   }
+  //   else{
+  //   var userObj = {
+  //     carts: data
+  //   };
+  // }
+console.log(data)
+    res.json(data)
+    // res.json({carts : data});
+  });
+});
 // =====================================
 // PRODUCT VIEW PAGE 
 // =====================================
@@ -106,7 +136,7 @@ router.get("/productview/:col", function (req, res) {
     var prodObject = {
       product: data
     };
-    console.log(prodObject);
+    // console.log(prodObject);
     res.render("products", prodObject);
   });
 });
@@ -118,7 +148,7 @@ router.get("/productview/select/:condition", function (req, res) {
     var prodObject = {
       product: data
     };
-    console.log(prodObject);
+    // console.log(prodObject);
     res.render("products", prodObject);
   });
 });
@@ -167,7 +197,7 @@ router.get("/supervisorview", function (req, res) {
     var prodObject = {
       product: data
     };
-    console.log(prodObject);
+    // console.log(prodObject);
     res.render("supervisor", prodObject);
   });
 });

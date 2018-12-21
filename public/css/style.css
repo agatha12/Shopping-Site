@@ -45,6 +45,11 @@
     bottom: -700px; 
 }
 
+#product-dump {
+    font-size: 30px;
+    text-align: center;
+}
+
 #sortselect {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;   
@@ -52,7 +57,14 @@
     height: 40px;
 
 }
-
+#carttablediv{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 50px;
+   text-align: center;
+}
+.carttable {
+    font-size: 20px;
+}
 
 
 #content {
@@ -363,3 +375,20 @@
         margin-left: 2%;
     
     }
+/* cart table */
+table {
+    font-family: 'Roboto', sans-serif;
+    border-collapse: collapse;
+    width: 500px;
+    margin: 0 auto;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
