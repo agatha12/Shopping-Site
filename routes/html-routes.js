@@ -20,7 +20,6 @@ module.exports = function(app) {
       res.redirect("/members");
     }
     res.sendFile(path.join(__dirname, "../public/signup.html"));
-    // ../views/index.handlebars
   });
 
   app.get("/login", function(req, res) {

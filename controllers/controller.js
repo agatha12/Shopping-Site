@@ -9,7 +9,7 @@ var myModel = require("../models/models.js");
 // HOME PAGE 
 // =====================================
 
-router.get("/home", function (req, res) {
+router.get("/", function (req, res) {
   res.render("index");
 });
 
