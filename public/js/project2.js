@@ -1,3 +1,15 @@
+var user
+
+
+$(document).ready(function(){
+    $.get("/api/user_data", function(data){
+        console.log(data.id);
+        user = data.id
+        $("#cartviewbutton").attr("href", "/api/carts/"+user)
+      });
+ })
+
+
 // API POST REQUEST TO ADD NEW TESTIMONIAL 
 $(function () {
 
@@ -198,7 +210,7 @@ $(function () {
                 + "\n" + img);
             $("#product-dump").append(name);
             $("#price-dump").append(price);
-            $("#designer-dump").append(designer);
+            $("#designer-dump").append("Designer: "+designer);
             $("#productImg").attr("src", img);
             $("#product").val(name);
         });
@@ -231,17 +243,28 @@ $(function () {
         }
 
         if (formValidate() == true) {
+
+            $.get("/api/cartcheck/" + user, function (data) {
+                // console.log(data)
+                // console.log(data[0].userid)
+            
+
+
+            if(data[0] === undefined){
+           
+            // Pulling out the value from USER input
+            var userid = user
+            var cartProduct = $("#product-dump").text();
+            var cartQuantity = $("input[name=quantity]").val();
+           
             var newOrder = {
-                userid: $("input[name=userName]").val(),
-                products: $("input[name=product]").val(),
-                quantity: $("input[name=quantity]").val()
+                userid: userid,
+                products: cartProduct,
+                quantity: cartQuantity
             }
 
 
-            // Pulling out the value from USER input
-            var userid = newOrder.userid
-            var cartProduct = newOrder.products;
-            var cartQuantity = newOrder.quantity;
+           console.log(newOrder)
 
             // console.log("userid: " + userid + "\n" + "products: " + cartProduct + "\n" + "quantity: " + cartQuantity);
 
@@ -252,7 +275,6 @@ $(function () {
             $("#productImg").hide();
             $(".product-form").hide();
 
-            alert("Hey " + userid + ", " + " you just added " + cartQuantity + " " + cartProduct + " in your cart.");
 
 
             $.ajax("/api/carts", {
@@ -260,11 +282,77 @@ $(function () {
                 data: newOrder
             }).then(
                 function () {
+                                alert("Hey " + userid + ", " + " you just added " + cartQuantity + " " + cartProduct + " in your cart.");
+
                     console.log("New Order Made!");
                     location.reload();
                 });
 
-        } else {
+        
+            }
+            else{
+                console.log(data)
+                console.log("yay")
+                
+       
+            var cartProductnew = $("#product-dump").text();
+            var cartQuantitynew = $("input[name=quantity]").val();
+   
+            var cartProductold = data[0].products;
+            var cartQuantityold = data[0].quantity;
+
+                 var userid = user
+            var cartProduct = JSON.stringify([cartProductold, cartProductnew])
+            var cartQuantity = JSON.stringify([cartQuantityold, cartQuantitynew])
+           
+            var newOrder = {
+
+                products: cartProduct,
+                quantity: cartQuantity
+            }
+          
+                console.log(cartProduct)
+                console.log(cartQuantity)
+
+
+       
+
+
+           console.log(newOrder)
+
+            // console.log("userid: " + userid + "\n" + "products: " + cartProduct + "\n" + "quantity: " + cartQuantity);
+
+            // // empty out the modal content
+            $("#product-dump").empty();
+            $("#price-dump").empty();
+            $("#designer-dump").empty();
+            $("#productImg").hide();
+            $(".product-form").hide();
+
+
+
+            $.ajax("/api/cartsupdate/" + user, {
+                type: "PUT",
+                data: newOrder
+            }).then(
+                function () {
+                                alert("Hey User number " + userid + ", " + " you just added " + cartQuantitynew + " " + cartProductnew + " in your cart.");
+
+                    console.log("New Order Made!");
+                    location.reload();
+                });
+            } 
+        
+        })
+        
+            
+            
+        } 
+        
+        
+        
+        
+        else {
             alert("Please answer all fields first.")
         }
     });

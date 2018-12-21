@@ -9,12 +9,12 @@ var isAuthenticated = function (req, res, next){
   }
 
   // If the user isn't logged in, redirect them to the login page
-  return res.redirect("/");
+  return res.redirect("/passport");
 }
 
 module.exports = function(app) {
 
-  app.get("/", function(req, res) {
+  app.get("/passport", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
       res.redirect("/members");
