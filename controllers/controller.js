@@ -114,7 +114,7 @@ router.get("/productview/:col", function (req, res) {
 router.get("/productview/select/:condition", function (req, res) {
   var condition = req.params.condition
   console.log(condition)
-  product.selectWhere("category", condition, function (err, data) {
+  product.selectWhere("category", condition, function (data) {
     var prodObject = {
       product: data
     };

@@ -36,7 +36,7 @@ var product = {
     });
   },
   selectWhere: function(col, condition, cb){
-    orm.selectWhere("products", col, condition, function(res){
+    orm.selectWhere("products", col, condition, function(err, res){
       cb(res);
     });
   },
