@@ -9,7 +9,7 @@ var myModel = {
     },
     // Variables cols and vals are arrays 
     create: function(cols, vals, cb) {
-        orm.create("testimonials", cols, vals, function(res) {
+        orm.createprod("testimonials", cols, vals, function(res) {
             cb(res);
         });
     },

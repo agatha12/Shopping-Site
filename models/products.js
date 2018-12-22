@@ -20,8 +20,8 @@ var product = {
     });
   },
   // The variables cols and vals are arrays.
-  create: function(cols, vals, cb) {
-    orm.create("products", cols, vals, function(res) {
+  createprod: function(cols, vals, cb) {
+    orm.createprod("products", cols, vals, function(res) {
       cb(res);
     });
   },
