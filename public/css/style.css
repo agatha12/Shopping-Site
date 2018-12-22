@@ -441,7 +441,7 @@ table {
   .designer {
       max-height: 500px;
       max-width: auto;
-      border-radius: 50px;
+      /* border-radius: 10px; */
       /* float: left;
       padding-left: 20%;
       padding-right: 5%; */
@@ -451,7 +451,7 @@ table {
     margin-top: 2%;
     max-height: 500px;
     max-width: auto;
-    border-radius: 50px;
+    border-radius: 10px;
     /* float: left;
     padding-left: 20%;
     padding-right: 5%; */
@@ -532,7 +532,6 @@ table {
   .designer {
     max-height: 500px;
     max-width: auto;
-    align: center;
 }
 
 p {
