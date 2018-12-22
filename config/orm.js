@@ -40,11 +40,17 @@ function objToSql(ob) {
 }
 
 function updatecart(object){
-    console.log(object)
-    var columns = object.columns
-    var values = object.values
-    var string = columns[0] + "=\"" + values[0] + "\", " + columns[1] + "=\"" + values[1] + "\""
-    
+
+    var column1 = object.columns[0]
+    var value1raw = object.values[0].split("\"").join("")
+    var value1r = value1raw.split("[").join("")
+    var value1 = value1r.split("]").join("")
+    var column2 = object.columns[1]
+    var value2raw = object.values[1].split("\"").join("")
+    var value2r = value2raw.split("[").join("")
+    var value2 = value2r.split("]").join("")
+     var string = column1 + "=\"" + value1 + "\", " + column2 + "=\"" + value2 + "\""
+
 
     return string
 }
@@ -103,7 +109,7 @@ var orm = {
       cb (result);
     });
   },
-  create: function (table, cols, vals, cb) {
+  createprod: function (table, cols, vals, cb) {
 
     var queryString = "INSERT INTO " + table;
 

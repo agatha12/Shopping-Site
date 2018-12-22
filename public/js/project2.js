@@ -6,6 +6,14 @@ $(document).ready(function(){
         console.log(data.id);
         user = data.id
         $("#cartviewbutton").attr("href", "/api/carts/"+user)
+        if(user === 14){
+            var button = $("<a>")
+            button.attr("id", "supview")
+            button.text("Supervisor View")
+            button.attr("href", "/supervisorview")
+            $("header").append(button)
+        }
+        
       });
  })
 
@@ -43,6 +51,7 @@ $(function () {
 $(function () {
     $(".deleteprod").on("click", function () {
         var id = $(this).val()
+        console.log(id)
 
         $.ajax("/api/supervisor/" + id, {
             type: "DELETE"
@@ -121,7 +130,8 @@ $(function () {
             price: $("input[name=price]").val(),
             img: $("input[name=image]").val(),
             designer: $("input[name=designer]").val(),
-            catergory: $("input[name=category]").val()
+            catergory: $("input[name=category]").val(),
+            quantity: 20
         }
         console.log(newProd)
         $.ajax("/api/supervisor/add", {
@@ -145,7 +155,7 @@ $(function () {
         console.log(this)
         console.log($(this))
 
-        console.log(this.val)
+        console.log(id)
 
         $.ajax("/api/suptesti/" + id, {
             type: "DELETE"
@@ -190,6 +200,9 @@ $(function () {
 $(function () {
     // add to cart modal function
     $(".cartBtn").on("click", function (event) {
+        if(user === undefined){
+            window.location.href='/passport'
+        }
 
         event.preventDefault;
         // id for button
@@ -396,7 +409,7 @@ $(function () {
             type: "DELETE"
         }).then(
             function () {
-                console.log("deleted User: " + userid);
+                console.log("deleted User: " + condition);
                 location.reload();
             }
         );
@@ -404,3 +417,19 @@ $(function () {
 });
 
 
+
+$(function () {
+    $("#supadd").on("click", function () {
+        window.location.href='/addprod'
+    });
+});
+$(function () {
+    $("#suptesti").on("click", function () {
+        window.location.href='/supervisortestimonialview'
+    });
+});
+$(function () {
+    $("#suporders").on("click", function () {
+        window.location.href='/supervisorordersview'
+    });
+});

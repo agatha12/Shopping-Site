@@ -204,7 +204,7 @@ router.get("/supervisorview", function (req, res) {
 
 // Supervisor deletes a product 
 router.delete("/api/supervisor/:id", function (req, res) {
-  var condition = req.params.id;
+  var condition = "id=" + req.params.id;
 
   product.delete(condition, function (result) {
     if (result.affectedRows == 0) {
@@ -241,10 +241,10 @@ router.get("/addprod", function (req, res) {
 
 // Supervisor can add a new product
 router.post("/api/supervisor/add", function (req, res) {
-  product.create([
-    "id", "name", "price", "img", "designer", "category"
+  product.createprod([
+    "id", "name", "price", "img", "designer", "category", "quantity"
   ], [
-      req.body.id, req.body.name, req.body.price, req.body.img, req.body.designer, req.body.categort
+      req.body.id, req.body.name, req.body.price, req.body.img, req.body.designer, req.body.category, req.body.quantity
     ], function (result) {
       // Send back the ID of the new quote
       res.json({ id: result.insertId });
@@ -273,7 +273,7 @@ router.get("/supervisortestimonialview", function (req, res) {
 
 // Supervisor can delete user testimonials
 router.delete("/api/suptesti/:condition", function (req, res) {
-  var condition = "id = " + req.params.id;
+  var condition = "id = " + req.params.condition;
   console.log(condition)
   myModel.delete(condition, function (result) {
     if (result.affectedRows == 0) {
@@ -305,7 +305,7 @@ router.get("/supervisorordersview", function (req, res) {
 // deletes customer order in database
 router.delete("/api/supervisorordersview/:condition", function (req, res) {
 
-  var condition = req.params.userid;
+  var condition = "userid="+req.params.condition;
   console.log(condition);
 
   carts.delete(condition, function (result) {
