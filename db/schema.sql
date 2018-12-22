@@ -11,6 +11,7 @@ price int(10) not Null,
 img varchar(60) Null,
 designer varchar(20) Null,
 category varchar(20) Null,
+quantity int(10) Null,
 primary key(id)
 );
 
