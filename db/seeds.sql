@@ -40,9 +40,9 @@ values(001, "Aura Goddess Duster Gown", 500, "https://i.ibb.co/jL4KKF6/auragodde
 (040, "Tangerine Dress", 595, "https://i.ibb.co/xCDVF9D/delavalidress.jpg", "De La Vali", "apparel", 20),
 (041, "Keith Jumpsuit", 450, "https://i.ibb.co/WGmpWZM/delavalionesie.jpg", "De La Vali", "apparel", 20),
 (042, "Gathered Waist Tartan Trench Coat", 1460, "https://i.ibb.co/Ht5xGh5/rohkplaidcoat.jpg", "Rohk", "outerwear", 20),
-(043, "Draped houndstooth satin-jersey maxi dress", 950, "https://i.ibb.co/LhmpzfG/rohkdress.jpg", "Rohk", "apparel", 20),
+(043, "Draped houndstooth maxi dress", 950, "https://i.ibb.co/LhmpzfG/rohkdress.jpg", "Rohk", "apparel", 20),
 (044, "Cutout leather maxi dress", 2130, "https://i.ibb.co/61m0bBT/rohkyellowdress.jpg", "Rohk", "apparel", 20),
-(045, "Cropped striped cotton and wool-blend jacquard slim-leg pants", 650, "https://i.ibb.co/7Ccf7Mh/rohkpant.jpg", "Rohk", "apparel", 20)
+(045, "Cropped striped pants", 650, "https://i.ibb.co/7Ccf7Mh/rohkpant.jpg", "Rohk", "apparel", 20)
 ;
 
 
@@ -53,7 +53,7 @@ values(001, "I ordered the Gaya Goddess Duster for a weekend get away. This cove
 (003, "The Jane Keyhole Silk Dress was delivered in such a sweetly wrapped box. The silk was so soft and put together so nicely. The dress withstood a long night of me out dancing.", "Gisele", "Manhattan"),
 (004, "Love the Leopard Faux Fur Coat! So cozy and warm. Received so many compliments on my new Leopard coat!", "Martina", "Hoboken"),
 (005, "I bought the Pink Fey Velvet Box Bag and love it. It’s really well made, and really roomy inside for your cell phone, wallet, touch up make up, and emergency slip on Dr. Scholls during a night out.", "Anna", "Houston"),
-(006, "The Checked Trench Coat is a must have. Such a cool addition to my wardrobe and I get so many compliments on it. There is plenty of pocket room in the inner chest, as well as a pocket for each hand. The lining is thick enough to keep you warm on, while not being too heavy of a coat. Highly recommend this piece!", "Alyssa", "Washington DC"),
+(006, "The Checked Trench Coat is a must have. Such a cool addition to my wardrobe and I get so many compliments on it. There is plenty of pocket room in the inner chest, as well as a pocket for each hand.", "Alyssa", "Washington DC"),
 (007, "Oh my gosh! I love my new Onsie! It is so cute, so comfy, and so different than any of my peices! I bought it in black and love love love it. Thanks COMPANY NAME!", "Tabetha", "San Diego"),
 (008, "So in love with my new dress! The Rose Print Silk Maxi Dress is so adorable and make of such nice silk. Thank you!!", "Rachel", "Brooklyn"),
 (009, "Totally love the Leather Ankle Boots! They go with everything and are so comfortable! Totally recommend these babies. They fit to size too, I wear a size 8 and they fit perfectly to my size 8 shoe.", "Cynthia", "Queens"),
@@ -61,3 +61,5 @@ values(001, "I ordered the Gaya Goddess Duster for a weekend get away. This cove
 ;
 
 insert into orders (userid, products, quantity) values ("mbvj", "Checked Trench Coat", "Four");
+
+

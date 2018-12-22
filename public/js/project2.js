@@ -302,10 +302,10 @@ $(function () {
                 data: newOrder
             }).then(
                 function () {
-                                alert("Hey " + userid + ", " + " you just added " + cartQuantity + " " + cartProduct + " in your cart.");
+                    $("#designer-dump").append("You just added " + cartQuantity + " " + cartProduct + " in your cart.");
 
                     console.log("New Order Made!");
-                    location.reload();
+                    // location.reload();
                 });
 
         
@@ -356,10 +356,10 @@ $(function () {
                 data: newOrder
             }).then(
                 function () {
-                                alert("Hey User number " + userid + ", " + " you just added " + cartQuantitynew + " " + cartProductnew + " in your cart.");
+                    $("#designer-dump").append("You just added " + cartQuantitynew + " " + cartProductnew + " in your cart.");
 
                     console.log("New Order Made!");
-                    location.reload();
+                    // location.reload();
                 });
             } 
         
