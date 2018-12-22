@@ -6,7 +6,7 @@ $(document).ready(function(){
         console.log(data.id);
         user = data.id
         $("#cartviewbutton").attr("href", "/api/carts/"+user)
-        if(user === 14){
+        if(user === 1){
             var button = $("<a>")
             button.attr("id", "supview")
             button.text("Supervisor View")
