@@ -331,6 +331,19 @@ router.get("/aboutus", function (req, res) {
   });
 });
 
+// displays about the designers page
+
+router.get("/aboutthem", function (req, res) {
+  product.all(function (data) {
+    var prodObject = {
+      product: data
+    };
+    // console.log(prodObject);
+    res.render("aboutthem", prodObject);
+  });
+});
+
+
 
 // Export routes for server.js to use.
 module.exports = router;

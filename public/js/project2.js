@@ -188,6 +188,13 @@ $(function () {
 });
 
 $(function () {
+    $("#designers-header").on("click", function () {
+        
+        window.location.href = '/aboutthem'
+    });
+});
+
+$(function () {
     // add to cart modal function
     $(".cartBtn").on("click", function (event) {
 
