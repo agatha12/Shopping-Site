@@ -79,6 +79,7 @@ router.get("/api/carts/:userid", function (req, res) {
     var userObj = {
       carts: data
     };
+    
 
     // console.log(userObj); 
     // console.log("CART CONTENT" + "\n" 
