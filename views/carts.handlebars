@@ -1,47 +1,4 @@
-<header id="header">
-  <nav>
-    <!-- Log-In, Cart, About us -->
-    <div class="header-container">
-      <span>
-        <a id="cartviewbutton" href="#">
-          <i id="#main-header-two" class="fas fa-shopping-cart fa-2x shopCart"></i>
-        </a>
-      </span>
-    </div>
-    <div class="header-container">
-      <span>
-        <a href="/passport">
-          <p id="main-header-three">LOG-IN</p>
-        </a>
-      </span>
-    </div>
-      <div class="header-container">
-      <span>
-        <a href="/logout">
-          <p id="main-header-three">LOG-OUT</p>
-        </a>
-      </span>
-    </div>
-   <div id="lefty">
-      <span>
-        <a href="/aboutus">
-          <p id="main-header-four">ABOUT US</p>
-        </a>
-      </span>
-    </div>
-    <br>
-    <h1>DevTaukx</h1>
-    <button id="designers-header" class="hvr-grow-rotate">Designers</button>
-    <button value="apparel" class="searchlink hvr-grow-rotate">Clothing</button>
-    <button value="accessories" class="searchlink hvr-grow-rotate">Accessories</button>
-    <button value="outerwear" class="searchlink hvr-grow-rotate">Outerwear</button>
-    <button value="shoes" class="searchlink hvr-grow-rotate">Shoes</button>
-    <button id="testimonials-header" class="hvr-grow-rotate">Testimonials</button>
-  
 
-  </nav>
-
-</header>
 
 <div id="carttablediv">
 <h2>Your Shopping Cart</h2>
@@ -52,9 +9,9 @@
     <th>Quantity</th>
   </tr>
   {{#each carts}}
-  <tr>
-    <td>{{products}}</td>
-    <td>{{quantity}}</td>
+  <tr id="contempty">
+    <td id="cartprods">{{products}}</td>
+    <td id="cartquants">{{quantity}}</td>
   </tr>
  {{/each}}
 </table>
@@ -68,3 +25,26 @@
 </div>
 
 
+<script>
+  $(document).ready(function(){
+    var prods = $("#cartprods").text().split(",")
+    var quants = $("#cartquants").text().split(",")
+ 
+    $("#contempty").empty()
+    for(i=0;i<prods.length;i++){
+      var tr = $("<tr>")
+      var td1 = $("<td>")
+      var td2 = $("<td>")
+      
+      td1.text(prods[i])
+      td2.text(quants[i])
+      tr.append(td1)
+      tr.append(td2)
+      $("table").append(tr)
+
+    }
+
+
+    $(".main-footer").attr("id", "cartfooter")
+  })
+</script>

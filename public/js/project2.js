@@ -377,6 +377,13 @@ $(function () {
         }
     });
 });
+$(function(){
+    $("#modalclosebutton").on("click", function(){
+        location.reload();
+       
+    })
+    })
+    
 
 $(function () {
     $("#shoppingcart").on("click", function (event) {
